@@ -2,22 +2,20 @@
 
 ###Getting Started###
 
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
 Checkout this repo, install dependancies, then start the gulp process with the following:
 
 ```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
+	> git clone git@github.com:zammer/vegan-restaurant-finder.git
+	> cd vegan-restaurant-finder
 	> npm install
 	> npm start
 ```
 
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+### TODO ###
 
-```
-	> npm install
-	> npm start
-```
+1) Fix responsive design
+2) Add tests
+3) Implement direction screen
+4) Add Logo
+5) Login
+6) Saved searches
