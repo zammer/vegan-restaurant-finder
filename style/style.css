@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #8dd83a;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.app-main {
+  background-color: #fafafa;
+}
+
+.app-row {
+  height: 100%;
+}
+
+.app-map-area {
+  height: 100%;
+}
+
+.app-map-container {
+  height: calc(100vh - 180px);
+  width: calc(50vw - 30px);
+  margin-top: 0.75rem;
+}
+
+.app-restaurant-list {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  height: calc(100vh - 5.25rem);
+  overflow-y: scroll;
+}
+
+.card {
+  margin-bottom: 10px;
+}
