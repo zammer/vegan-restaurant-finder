@@ -13,9 +13,9 @@ Checkout this repo, install dependancies, then start the gulp process with the f
 
 ### TODO ###
 
-1) Fix responsive design
-2) Add tests
-3) Implement direction screen
-4) Add Logo
-5) Login
-6) Saved searches
+1. Fix responsive design
+2. Add tests
+3. Implement direction screen
+4. Add Logo
+5. Login
+6. Saved searches
