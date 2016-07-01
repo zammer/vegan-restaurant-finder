@@ -1,6 +1,7 @@
 import axios from 'axios';
 export const FETCH_RESTAURANT_LIST = 'FETCH_RESTAURANT_LIST';
 export const SELECT_RESTAURANT = 'SELECT_RESTAURANT';
+
 export const fetchRestaurants = (city, cc, veg) => {
 
   const request = axios.get(`http://localhost:8888/api/${city}/${cc}/${veg}`);

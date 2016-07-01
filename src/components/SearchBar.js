@@ -12,20 +12,9 @@ const SearchBar = ({ onFormSubmit, onInputChange, onSelectChange, term, cc }) =>
   };
 
   return (
-    <form style={formStyles} onSubmit={onFormSubmit} className="form">
+    <form onSubmit={onFormSubmit} className="app-search-bar">
       <div className="row">
-        <div style={inputStyles} className="col-md-12">
-          <input
-            type="text"
-            className="form-control"
-            id="city"
-            value={term}
-            onChange={onInputChange}
-            placeholder="Enter city/town" />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-8">
+        <div className="col-xs-12">
           <select onChange={onSelectChange} value={cc} className="form-control" name="country">
             <option value="AF">Afghanistan</option>
             <option value="AL">Albania</option>
@@ -276,8 +265,21 @@ const SearchBar = ({ onFormSubmit, onInputChange, onSelectChange, term, cc }) =>
             </select>
 
         </div>
-        <div className="col-md-4">
-          <button className="btn btn-secondary pull-right" type="submit">Submit</button>
+      </div>
+      <div className="row">
+        <div className="col-xs-12">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              id="city"
+              value={term}
+              onChange={onInputChange}
+              placeholder="Enter city/town" />
+            <span className="input-group-btn">
+              <button className="btn btn-primary" type="button">Find</button>
+            </span>
+          </div>
         </div>
       </div>
     </form>

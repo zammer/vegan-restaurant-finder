@@ -20,7 +20,7 @@ export default class RestaurantList extends Component {
       const bgColor = this.props.selectedRestaurant.id === restaurant.id ? '#dafbb7' : '#fff';
 
       return (
-        <div key={restaurant.id} className="col-md-12">
+        <div key={restaurant.id}>
           <div
             style={{ backgroundColor: bgColor }}
             ref={restaurant.id}

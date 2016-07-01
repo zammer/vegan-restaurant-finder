@@ -5,14 +5,14 @@ import ReactSpinner from 'react-spinjs';
 export default ({ selectedRestaurant, region, selectRestaurant }) => {
 
   if(!selectedRestaurant.coordinate.latitude && !selectedRestaurant.coordinate.longitude) {
-    return (<div style={{backgroundColor: '#ddd', height: "calc(100vh - 180px)", width: 'calc(50vw - 30px)', marginTop: '0.75rem'}}>
+    return (<div className="hidden-sm-down" style={{backgroundColor: '#ddd', height: "calc(100vh - 180px)", width: 'calc(50vw - 30px)', marginTop: '0.75rem'}}>
       <ReactSpinner />
     </div>)
   }
   return (
       <GoogleMapLoader
         containerElement={
-          <div className="app-map-container" />
+          <div className="hidden-sm-down app-map-container" />
         }
         googleMapElement={
           <GoogleMap

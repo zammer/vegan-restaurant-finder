@@ -15,11 +15,11 @@ export default class App extends Component {
         </nav>
         <div className="container-fluid app-main">
           <div className="row app-row">
-            <div className="col-md-6 app-map-area">
+            <div className="col-md-6 col-xs-12 app-map-area">
               <SearchBar />
               <GoogleMap />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 col-xs-12">
               <div className="app-restaurant-list">
                 <RestaurantList />
               </div>
