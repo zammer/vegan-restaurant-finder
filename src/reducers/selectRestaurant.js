@@ -1,4 +1,4 @@
-import { SELECT_RESTAURANT, FETCH_RESTAURANT_LIST } from '../actions/index';
+import { SELECT_RESTAURANT, RECEIVE_RESTAURANTS } from '../actions/index';
 
 const initialState = {
   id: null,
@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
         id: action.payload.id,
         coordinate: action.payload.coordinate
       }
-    case FETCH_RESTAURANT_LIST:
+    case RECEIVE_RESTAURANTS:
       return {
         id: action.payload.restaurants[0].id,
         coordinate: action.payload.restaurants[0].location.coordinate

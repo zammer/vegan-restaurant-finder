@@ -3,30 +3,30 @@ import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 export default class RestaurantList extends Component {
 
+  selectedID = '';
+
   componentWillUpdate(nextProps) {
     if(this.refs[nextProps.selectedRestaurant.id]) {
       scrollIntoViewIfNeeded(this.refs[nextProps.selectedRestaurant.id], false, {
         duration: 500,
         easing: 'easeOut'
       });
-      this.refs[nextProps.selectedRestaurant.id].style.backgroundColor = '#dafbb7';
-      this.refs[this.props.selectedRestaurant.id].style.backgroundColor = '#fff';
     }
   }
 
-  render() {
-    const list = this.props.restaurants.map((restaurant, index) => {
+  _renderList() {
+    const { restaurants, selectedRestaurant } = this.props;
+    return restaurants.map((restaurant, index) => {
 
-      const bgColor = this.props.selectedRestaurant.id === restaurant.id ? '#dafbb7' : '#fff';
+      const selected = selectedRestaurant.id === restaurant.id ? 'selected' : null;
 
       return (
         <div key={restaurant.id}>
           <div
-            style={{ backgroundColor: bgColor }}
             ref={restaurant.id}
             onClick={() => {
               this.props.selectRestaurant(restaurant.id, restaurant.location.coordinate)}}
-              className="card">
+              className={`card ${selected}`}>
             <div className="card-block" style={{cursor: 'pointer'}}>
               <div className="media">
                 <a className="media-left" href="#">
@@ -44,10 +44,13 @@ export default class RestaurantList extends Component {
         </div>
       );
     });
+  }
 
+  render() {
+    const { restaurants } = this.props;
     return (
       <div className="restaurant-list">
-        {list}
+        { restaurants ? this._renderList() : null }
       </div>
     );
   }

@@ -1,10 +1,15 @@
-import { FETCH_RESTAURANT_LIST } from '../actions/index';
+import { RECEIVE_RESTAURANTS, REQUEST_RESTAURANTS } from '../actions/index';
 
 export default (state = [], action) => {
 
   switch(action.type) {
-    case FETCH_RESTAURANT_LIST:
+    case RECEIVE_RESTAURANTS:
       return action.payload.restaurants;
+
+    case REQUEST_RESTAURANTS:
+      return state;
+
+    default:
+      return state;
   }
-  return state;
 };

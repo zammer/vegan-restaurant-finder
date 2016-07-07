@@ -277,7 +277,7 @@ const SearchBar = ({ onFormSubmit, onInputChange, onSelectChange, term, cc }) =>
               onChange={onInputChange}
               placeholder="Enter city/town" />
             <span className="input-group-btn">
-              <button className="btn btn-primary" type="button">Find</button>
+              <button onClick={onFormSubmit} className="btn btn-primary" type="button">Find</button>
             </span>
           </div>
         </div>
